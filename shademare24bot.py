@@ -38,7 +38,7 @@ async def on_message_delete(message):  #chat log of messages that got deleted
     author = message.author
     content = message.content
     channel = message.channel
-    if content.startswith(".prune"):
+    if content.startswith(".prune"):   # for working with a legit bot used for the discord server
         return
     else:
         await client.send_message(channel, '{}\'s message, "{}" was deleted :frowning:'.format(author, content))
